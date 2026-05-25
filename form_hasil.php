@@ -9,6 +9,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     exit();
 }
 
+function ubah_tools($aku){
+    if($warnaku == 'A'){
+        return "biru";
+    }elseif($warnaku == 'B'){
+        return "merah";
+    }elseif($warnaku == 'C'){
+        return "kuning";
+    }else{
+        return "gapunya kelas";
+    }
+}
 function penilaian ($value){
     if ($value <= 100 && $value >= 90 ){
         $grade = 'A';
@@ -38,7 +49,7 @@ function penilaian ($value){
     <h1>Grade Anda</h1>    
     <div class="box-hasil">
             <p><strong>Nama :  </strong> <?php echo $nama; ?></p>
-            <p><strong>Kelas: </strong> <?php echo $kelas; ?></p>
+            <p><strong>Kelas: </strong> <?php echo ubah_tools($kelas); ?></p>
             <p><strong>Nilai: </strong> <?php echo $nilai; ?></p>
             <p><strong>Email: </strong> <?php echo $email; ?></p>
             <p><strong>Grade: </strong><?php echo penilaian($nilai); ?></p>
