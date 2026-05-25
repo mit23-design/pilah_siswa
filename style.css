@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input-form input {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.input-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-form button:hover {
+  background-color: white;
+  color: #5daafc;
+  border: 1px solid #007bff;
+}
+
+select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  color: #333;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23666666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background: no-repeat;
+  background-position: right10px top 50%;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+select option {
+  padding: 10px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* halaman 2 */
+.contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.box-hasil {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box-hasil a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.box-hasil a:hover {
+  background-color: white;
+  color: #5daafc;
+  border: 1px solid #007bff;
+}
