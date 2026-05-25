@@ -4,21 +4,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $kelas = $_POST['kelas'];
     $nilai = $_POST['nilai'];
     $email = $_POST['email_siswa'];
+} else {
+    header("Location: index.php");
+    exit();
+}
 
-    if ($nilai <= 100 && $nilai >= 90 ){
+function penilaian ($value){
+    if ($value <= 100 && $value >= 90 ){
         $grade = 'A';
-    } elseif($nilai <= 89 && $nilai >= 75){
+    } elseif($value <= 89 && $value >= 75){
         $grade = 'B';
-    } elseif($nilai <= 74 && $nilai >= 65){
+    } elseif($value <= 74 && $value >= 65){
         $grade = 'C';
-    } elseif($nilai <= 64 && $nilai >= 45){
+    } elseif($value <= 64 && $value >= 45){
         $grade = 'D';
     } else {
         $grade = 'E';
     }
-} else {
-    header("Location: index.php");
-    exit();
+    return $grade;
 }
 ?>
 
@@ -38,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             <p><strong>Kelas: </strong> <?php echo $kelas; ?></p>
             <p><strong>Nilai: </strong> <?php echo $nilai; ?></p>
             <p><strong>Email: </strong> <?php echo $email; ?></p>
-            <p><strong>Grade: </strong><?php echo $grade; ?></p>
+            <p><strong>Grade: </strong><?php echo penilaian($nilai); ?></p>
             <a href="index.php">Kembali</a>
         </div>
     </div>

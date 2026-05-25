@@ -16,7 +16,7 @@
             
             <label>Kelas:</label>
             <select name="kelas">
-                <option value="" disabled selected hidden>-- pilih kelas anda --</option>
+                <option value="">-- pilih kelas anda --</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
